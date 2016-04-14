@@ -1,0 +1,581 @@
+------------- 27 -------------
+------------- 349 -------------
+402831
+  402831:	4c 8b 70 08          	mov    0x8(%rax),%r14
+  402835:	48 8b 38             	mov    (%rax),%rdi
+  402838:	49 2b 3e             	sub    (%r14),%rdi
+  40283b:	4c 8b 70 10          	mov    0x10(%rax),%r14
+  40283f:	49 03 3e             	add    (%r14),%rdi
+  402842:	48 83 ff 00          	cmp    $0x0,%rdi
+  402846:	7d d0                	jge    402818 <primal_bea_mpp+0xe8>
+{'jge': 1, 'add': 1, 'cmp': 1, 'mov': 3, 'sub': 1}
+4026a0
+  4026a0:	49 83 c0 01          	add    $0x1,%r8
+{'add': 1}
+40284e
+  40284e:	49 83 c1 01          	add    $0x1,%r9
+  402852:	49 89 fd             	mov    %rdi,%r13
+  402855:	4e 8b 04 cd 40 41 60 	mov    0x604140(,%r9,8),%r8
+  40285d:	49 c1 fd 3f          	sar    $0x3f,%r13
+  402861:	49 89 00             	mov    %rax,(%r8)
+  402864:	4e 8b 04 cd 40 41 60 	mov    0x604140(,%r9,8),%r8
+  40286c:	48 01 d0             	add    %rdx,%rax
+  40286f:	49 89 78 08          	mov    %rdi,0x8(%r8)
+  402873:	4c 31 ef             	xor    %r13,%rdi
+  402876:	49 89 78 10          	mov    %rdi,0x10(%r8)
+  40287a:	4d 29 68 10          	sub    %r13,0x10(%r8)
+  40287e:	49 39 c2             	cmp    %rax,%r10
+  402881:	4d 89 cd             	mov    %r9,%r13
+  402884:	77 a2                	ja     402828 <primal_bea_mpp+0xf8>
+{'xor': 1, 'sub': 1, 'mov': 7, 'add': 2, 'sar': 1, 'ja': 1, 'cmp': 1}
+400d37
+  400d37:	48 8b 72 30          	mov    0x30(%rdx),%rsi
+  400d3b:	48 8b 4a 18          	mov    0x18(%rdx),%rcx
+  400d3f:	48 8b 09             	mov    (%rcx),%rcx
+  400d42:	48 03 0e             	add    (%rsi),%rcx
+  400d45:	48 89 0a             	mov    %rcx,(%rdx)
+  400d48:	48 8b 4a 10          	mov    0x10(%rdx),%rcx
+  400d4c:	48 85 c9             	test   %rcx,%rcx
+  400d4f:	75 dd                	jne    400d2e <refresh_potential+0x4e>
+{'test': 1, 'add': 1, 'mov': 5, 'jne': 1}
+402828
+  402828:	44 8b 40 18          	mov    0x18(%rax),%r8d
+  40282c:	45 85 c0             	test   %r8d,%r8d
+  40282f:	7e ef                	jle    402820 <primal_bea_mpp+0xf0>
+{'test': 1, 'jle': 1, 'mov': 1}
+------------- 701 -------------
+402831
+  402831:	4c 8b 70 08          	mov    0x8(%rax),%r14
+  402835:	48 8b 38             	mov    (%rax),%rdi
+  402838:	49 2b 3e             	sub    (%r14),%rdi
+  40283b:	4c 8b 70 10          	mov    0x10(%rax),%r14
+  40283f:	49 03 3e             	add    (%r14),%rdi
+  402842:	48 83 ff 00          	cmp    $0x0,%rdi
+  402846:	7d d0                	jge    402818 <primal_bea_mpp+0xe8>
+{'jge': 1, 'add': 1, 'cmp': 1, 'mov': 3, 'sub': 1}
+4026a0
+  4026a0:	49 83 c0 01          	add    $0x1,%r8
+{'add': 1}
+40284e
+  40284e:	49 83 c1 01          	add    $0x1,%r9
+  402852:	49 89 fd             	mov    %rdi,%r13
+  402855:	4e 8b 04 cd 40 41 60 	mov    0x604140(,%r9,8),%r8
+  40285d:	49 c1 fd 3f          	sar    $0x3f,%r13
+  402861:	49 89 00             	mov    %rax,(%r8)
+  402864:	4e 8b 04 cd 40 41 60 	mov    0x604140(,%r9,8),%r8
+  40286c:	48 01 d0             	add    %rdx,%rax
+  40286f:	49 89 78 08          	mov    %rdi,0x8(%r8)
+  402873:	4c 31 ef             	xor    %r13,%rdi
+  402876:	49 89 78 10          	mov    %rdi,0x10(%r8)
+  40287a:	4d 29 68 10          	sub    %r13,0x10(%r8)
+  40287e:	49 39 c2             	cmp    %rax,%r10
+  402881:	4d 89 cd             	mov    %r9,%r13
+  402884:	77 a2                	ja     402828 <primal_bea_mpp+0xf8>
+{'xor': 1, 'sub': 1, 'mov': 7, 'add': 2, 'sar': 1, 'ja': 1, 'cmp': 1}
+402828
+  402828:	44 8b 40 18          	mov    0x18(%rax),%r8d
+  40282c:	45 85 c0             	test   %r8d,%r8d
+  40282f:	7e ef                	jle    402820 <primal_bea_mpp+0xf0>
+{'test': 1, 'jle': 1, 'mov': 1}
+402820
+  402820:	48 01 d0             	add    %rdx,%rax
+  402823:	49 39 c2             	cmp    %rax,%r10
+  402826:	76 68                	jbe    402890 <primal_bea_mpp+0x160>
+{'add': 1, 'jbe': 1, 'cmp': 1}
+------------- 748 -------------
+402831
+  402831:	4c 8b 70 08          	mov    0x8(%rax),%r14
+  402835:	48 8b 38             	mov    (%rax),%rdi
+  402838:	49 2b 3e             	sub    (%r14),%rdi
+  40283b:	4c 8b 70 10          	mov    0x10(%rax),%r14
+  40283f:	49 03 3e             	add    (%r14),%rdi
+  402842:	48 83 ff 00          	cmp    $0x0,%rdi
+  402846:	7d d0                	jge    402818 <primal_bea_mpp+0xe8>
+{'jge': 1, 'add': 1, 'cmp': 1, 'mov': 3, 'sub': 1}
+4026a0
+  4026a0:	49 83 c0 01          	add    $0x1,%r8
+{'add': 1}
+40284e
+  40284e:	49 83 c1 01          	add    $0x1,%r9
+  402852:	49 89 fd             	mov    %rdi,%r13
+  402855:	4e 8b 04 cd 40 41 60 	mov    0x604140(,%r9,8),%r8
+  40285d:	49 c1 fd 3f          	sar    $0x3f,%r13
+  402861:	49 89 00             	mov    %rax,(%r8)
+  402864:	4e 8b 04 cd 40 41 60 	mov    0x604140(,%r9,8),%r8
+  40286c:	48 01 d0             	add    %rdx,%rax
+  40286f:	49 89 78 08          	mov    %rdi,0x8(%r8)
+  402873:	4c 31 ef             	xor    %r13,%rdi
+  402876:	49 89 78 10          	mov    %rdi,0x10(%r8)
+  40287a:	4d 29 68 10          	sub    %r13,0x10(%r8)
+  40287e:	49 39 c2             	cmp    %rax,%r10
+  402881:	4d 89 cd             	mov    %r9,%r13
+  402884:	77 a2                	ja     402828 <primal_bea_mpp+0xf8>
+{'xor': 1, 'sub': 1, 'mov': 7, 'add': 2, 'sar': 1, 'ja': 1, 'cmp': 1}
+400d10
+  400d10:	48 8b 4a 18          	mov    0x18(%rdx),%rcx
+  400d14:	48 8b 72 30          	mov    0x30(%rdx),%rsi
+  400d18:	48 83 c0 01          	add    $0x1,%rax
+  400d1c:	48 8b 09             	mov    (%rcx),%rcx
+  400d1f:	48 2b 0e             	sub    (%rsi),%rcx
+  400d22:	48 89 0a             	mov    %rcx,(%rdx)
+  400d25:	48 8b 4a 10          	mov    0x10(%rdx),%rcx
+  400d29:	48 85 c9             	test   %rcx,%rcx
+  400d2c:	74 23                	je     400d51 <refresh_potential+0x71>
+{'test': 1, 'je': 1, 'add': 1, 'mov': 5, 'sub': 1}
+402828
+  402828:	44 8b 40 18          	mov    0x18(%rax),%r8d
+  40282c:	45 85 c0             	test   %r8d,%r8d
+  40282f:	7e ef                	jle    402820 <primal_bea_mpp+0xf0>
+{'test': 1, 'jle': 1, 'mov': 1}
+------------- 1127 -------------
+401b31
+  401b31:	48 8b 5a 08          	mov    0x8(%rdx),%rbx
+  401b35:	48 63 4b 64          	movslq 0x64(%rbx),%rcx
+  401b39:	48 03 4a 38          	add    0x38(%rdx),%rcx
+  401b3d:	48 39 cd             	cmp    %rcx,%rbp
+  401b40:	7c e6                	jl     401b28 <price_out_impl+0x1b8>
+{'jl': 1, 'movslq': 1, 'add': 1, 'mov': 1, 'cmp': 1}
+401b42
+  401b42:	4d 89 f9             	mov    %r15,%r9
+  401b45:	4c 2b 0b             	sub    (%rbx),%r9
+  401b48:	4d 03 4d 00          	add    0x0(%r13),%r9
+  401b4c:	79 da                	jns    401b28 <price_out_impl+0x1b8>
+{'jns': 1, 'add': 1, 'mov': 1, 'sub': 1}
+401b28
+  401b28:	48 8b 53 48          	mov    0x48(%rbx),%rdx
+  401b2c:	48 85 d2             	test   %rdx,%rdx
+  401b2f:	74 6f                	je     401ba0 <price_out_impl+0x230>
+{'test': 1, 'je': 1, 'mov': 1}
+4017e0
+  4017e0:	48 89 f0             	mov    %rsi,%rax
+  4017e3:	48 83 c6 01          	add    $0x1,%rsi
+  4017e7:	48 c1 e0 06          	shl    $0x6,%rax
+  4017eb:	48 01 f8             	add    %rdi,%rax
+  4017ee:	48 83 fe 01          	cmp    $0x1,%rsi
+  4017f2:	48 89 50 08          	mov    %rdx,0x8(%rax)
+  4017f6:	48 89 48 10          	mov    %rcx,0x10(%rax)
+  4017fa:	4c 89 40 38          	mov    %r8,0x38(%rax)
+  4017fe:	4c 89 00             	mov    %r8,(%rax)
+  401801:	4c 89 48 30          	mov    %r9,0x30(%rax)
+  401805:	0f 84 91 00 00 00    	je     40189c <insert_new_arc+0xbc>
+{'je': 1, 'add': 2, 'shl': 1, 'mov': 6, 'cmp': 1}
+40180b
+  40180b:	49 89 f3             	mov    %rsi,%r11
+  40180e:	53                   	push   %rbx
+  40180f:	49 c1 eb 3f          	shr    $0x3f,%r11
+  401813:	49 01 f3             	add    %rsi,%r11
+  401816:	49 d1 fb             	sar    %r11
+  401819:	4c 89 d8             	mov    %r11,%rax
+  40181c:	48 c1 e0 06          	shl    $0x6,%rax
+  401820:	48 8d 44 07 c0       	lea    -0x40(%rdi,%rax,1),%rax
+  401825:	48 8b 58 30          	mov    0x30(%rax),%rbx
+  401829:	49 39 d9             	cmp    %rbx,%r9
+  40182c:	7f 2a                	jg     401858 <insert_new_arc+0x78>
+{'lea': 1, 'shr': 1, 'mov': 3, 'add': 1, 'push': 1, 'sar': 1, 'jg': 1, 'shl': 1, 'cmp': 1}
+------------- 1224 -------------
+401b31
+  401b31:	48 8b 5a 08          	mov    0x8(%rdx),%rbx
+  401b35:	48 63 4b 64          	movslq 0x64(%rbx),%rcx
+  401b39:	48 03 4a 38          	add    0x38(%rdx),%rcx
+  401b3d:	48 39 cd             	cmp    %rcx,%rbp
+  401b40:	7c e6                	jl     401b28 <price_out_impl+0x1b8>
+{'jl': 1, 'movslq': 1, 'add': 1, 'mov': 1, 'cmp': 1}
+401b42
+  401b42:	4d 89 f9             	mov    %r15,%r9
+  401b45:	4c 2b 0b             	sub    (%rbx),%r9
+  401b48:	4d 03 4d 00          	add    0x0(%r13),%r9
+  401b4c:	79 da                	jns    401b28 <price_out_impl+0x1b8>
+{'jns': 1, 'add': 1, 'mov': 1, 'sub': 1}
+401830
+  401830:	4d 89 da             	mov    %r11,%r10
+  401833:	4c 89 de             	mov    %r11,%rsi
+  401836:	49 c1 ea 3f          	shr    $0x3f,%r10
+  40183a:	4d 01 da             	add    %r11,%r10
+  40183d:	49 d1 fa             	sar    %r10
+  401840:	4c 89 d0             	mov    %r10,%rax
+  401843:	48 c1 e0 06          	shl    $0x6,%rax
+  401847:	48 8d 44 07 c0       	lea    -0x40(%rdi,%rax,1),%rax
+  40184c:	48 8b 58 30          	mov    0x30(%rax),%rbx
+  401850:	49 39 d9             	cmp    %rbx,%r9
+  401853:	7e 46                	jle    40189b <insert_new_arc+0xbb>
+{'lea': 1, 'shr': 1, 'mov': 4, 'jle': 1, 'add': 1, 'sar': 1, 'shl': 1, 'cmp': 1}
+401b28
+  401b28:	48 8b 53 48          	mov    0x48(%rbx),%rdx
+  401b2c:	48 85 d2             	test   %rdx,%rdx
+  401b2f:	74 6f                	je     401ba0 <price_out_impl+0x230>
+{'test': 1, 'je': 1, 'mov': 1}
+401858
+  401858:	4c 8b 50 08          	mov    0x8(%rax),%r10
+  40185c:	48 c1 e6 06          	shl    $0x6,%rsi
+  401860:	49 83 fb 01          	cmp    $0x1,%r11
+  401864:	48 8d 74 37 c0       	lea    -0x40(%rdi,%rsi,1),%rsi
+  401869:	4c 89 56 08          	mov    %r10,0x8(%rsi)
+  40186d:	4c 8b 50 10          	mov    0x10(%rax),%r10
+  401871:	4c 89 56 10          	mov    %r10,0x10(%rsi)
+  401875:	4c 8b 10             	mov    (%rax),%r10
+  401878:	4c 89 16             	mov    %r10,(%rsi)
+  40187b:	4c 8b 10             	mov    (%rax),%r10
+  40187e:	48 89 5e 30          	mov    %rbx,0x30(%rsi)
+  401882:	4c 89 56 38          	mov    %r10,0x38(%rsi)
+  401886:	48 89 50 08          	mov    %rdx,0x8(%rax)
+  40188a:	48 89 48 10          	mov    %rcx,0x10(%rax)
+  40188e:	4c 89 00             	mov    %r8,(%rax)
+  401891:	4c 89 40 38          	mov    %r8,0x38(%rax)
+  401895:	4c 89 48 30          	mov    %r9,0x30(%rax)
+  401899:	75 95                	jne    401830 <insert_new_arc+0x50>
+{'lea': 1, 'shl': 1, 'mov': 14, 'jne': 1, 'cmp': 1}
+------------- 1454 -------------
+401c98
+  401c98:	48 c7 42 30 00 00 00 	movq   $0x0,0x30(%rdx)
+  401ca0:	c7 42 18 01 00 00 00 	movl   $0x1,0x18(%rdx)
+  401ca7:	48 83 c2 40          	add    $0x40,%rdx
+  401cab:	48 39 d6             	cmp    %rdx,%rsi
+  401cae:	75 e8                	jne    401c98 <price_out_impl+0x328>
+{'movl': 1, 'cmp': 1, 'add': 1, 'jne': 1, 'movq': 1}
+------------- 1857 -------------
+402831
+  402831:	4c 8b 70 08          	mov    0x8(%rax),%r14
+  402835:	48 8b 38             	mov    (%rax),%rdi
+  402838:	49 2b 3e             	sub    (%r14),%rdi
+  40283b:	4c 8b 70 10          	mov    0x10(%rax),%r14
+  40283f:	49 03 3e             	add    (%r14),%rdi
+  402842:	48 83 ff 00          	cmp    $0x0,%rdi
+  402846:	7d d0                	jge    402818 <primal_bea_mpp+0xe8>
+{'jge': 1, 'add': 1, 'cmp': 1, 'mov': 3, 'sub': 1}
+4026a0
+  4026a0:	49 83 c0 01          	add    $0x1,%r8
+{'add': 1}
+402828
+  402828:	44 8b 40 18          	mov    0x18(%rax),%r8d
+  40282c:	45 85 c0             	test   %r8d,%r8d
+  40282f:	7e ef                	jle    402820 <primal_bea_mpp+0xf0>
+{'test': 1, 'jle': 1, 'mov': 1}
+400d10
+  400d10:	48 8b 4a 18          	mov    0x18(%rdx),%rcx
+  400d14:	48 8b 72 30          	mov    0x30(%rdx),%rsi
+  400d18:	48 83 c0 01          	add    $0x1,%rax
+  400d1c:	48 8b 09             	mov    (%rcx),%rcx
+  400d1f:	48 2b 0e             	sub    (%rsi),%rcx
+  400d22:	48 89 0a             	mov    %rcx,(%rdx)
+  400d25:	48 8b 4a 10          	mov    0x10(%rdx),%rcx
+  400d29:	48 85 c9             	test   %rcx,%rcx
+  400d2c:	74 23                	je     400d51 <refresh_potential+0x71>
+{'test': 1, 'je': 1, 'add': 1, 'mov': 5, 'sub': 1}
+400d60
+  400d60:	48 8b 72 20          	mov    0x20(%rdx),%rsi
+  400d64:	48 89 ca             	mov    %rcx,%rdx
+  400d67:	48 85 f6             	test   %rsi,%rsi
+  400d6a:	75 14                	jne    400d80 <refresh_potential+0xa0>
+{'test': 1, 'mov': 2, 'jne': 1}
+------------- 1909 -------------
+402831
+  402831:	4c 8b 70 08          	mov    0x8(%rax),%r14
+  402835:	48 8b 38             	mov    (%rax),%rdi
+  402838:	49 2b 3e             	sub    (%r14),%rdi
+  40283b:	4c 8b 70 10          	mov    0x10(%rax),%r14
+  40283f:	49 03 3e             	add    (%r14),%rdi
+  402842:	48 83 ff 00          	cmp    $0x0,%rdi
+  402846:	7d d0                	jge    402818 <primal_bea_mpp+0xe8>
+{'jge': 1, 'add': 1, 'cmp': 1, 'mov': 3, 'sub': 1}
+402828
+  402828:	44 8b 40 18          	mov    0x18(%rax),%r8d
+  40282c:	45 85 c0             	test   %r8d,%r8d
+  40282f:	7e ef                	jle    402820 <primal_bea_mpp+0xf0>
+{'test': 1, 'jle': 1, 'mov': 1}
+402820
+  402820:	48 01 d0             	add    %rdx,%rax
+  402823:	49 39 c2             	cmp    %rax,%r10
+  402826:	76 68                	jbe    402890 <primal_bea_mpp+0x160>
+{'add': 1, 'jbe': 1, 'cmp': 1}
+4026a0
+  4026a0:	49 83 c0 01          	add    $0x1,%r8
+{'add': 1}
+40279b
+  40279b:	49 83 c1 01          	add    $0x1,%r9
+  40279f:	48 83 c7 01          	add    $0x1,%rdi
+  4027a3:	4e 8b 04 cd 40 41 60 	mov    0x604140(,%r9,8),%r8
+  4027ab:	49 89 10             	mov    %rdx,(%r8)
+  4027ae:	4a 8b 14 cd 40 41 60 	mov    0x604140(,%r9,8),%rdx
+  4027b6:	49 89 c0             	mov    %rax,%r8
+  4027b9:	49 c1 f8 3f          	sar    $0x3f,%r8
+  4027bd:	48 89 42 08          	mov    %rax,0x8(%rdx)
+  4027c1:	4c 31 c0             	xor    %r8,%rax
+  4027c4:	48 89 42 10          	mov    %rax,0x10(%rdx)
+  4027c8:	4c 29 42 10          	sub    %r8,0x10(%rdx)
+  4027cc:	48 83 ff 33          	cmp    $0x33,%rdi
+  4027d0:	75 a0                	jne    402772 <primal_bea_mpp+0x42>
+{'xor': 1, 'sub': 1, 'mov': 6, 'add': 2, 'jne': 1, 'sar': 1, 'cmp': 1}
+------------- 2014 -------------
+402831
+  402831:	4c 8b 70 08          	mov    0x8(%rax),%r14
+  402835:	48 8b 38             	mov    (%rax),%rdi
+  402838:	49 2b 3e             	sub    (%r14),%rdi
+  40283b:	4c 8b 70 10          	mov    0x10(%rax),%r14
+  40283f:	49 03 3e             	add    (%r14),%rdi
+  402842:	48 83 ff 00          	cmp    $0x0,%rdi
+  402846:	7d d0                	jge    402818 <primal_bea_mpp+0xe8>
+{'jge': 1, 'add': 1, 'cmp': 1, 'mov': 3, 'sub': 1}
+402828
+  402828:	44 8b 40 18          	mov    0x18(%rax),%r8d
+  40282c:	45 85 c0             	test   %r8d,%r8d
+  40282f:	7e ef                	jle    402820 <primal_bea_mpp+0xf0>
+{'test': 1, 'jle': 1, 'mov': 1}
+402820
+  402820:	48 01 d0             	add    %rdx,%rax
+  402823:	49 39 c2             	cmp    %rax,%r10
+  402826:	76 68                	jbe    402890 <primal_bea_mpp+0x160>
+{'add': 1, 'jbe': 1, 'cmp': 1}
+400d10
+  400d10:	48 8b 4a 18          	mov    0x18(%rdx),%rcx
+  400d14:	48 8b 72 30          	mov    0x30(%rdx),%rsi
+  400d18:	48 83 c0 01          	add    $0x1,%rax
+  400d1c:	48 8b 09             	mov    (%rcx),%rcx
+  400d1f:	48 2b 0e             	sub    (%rsi),%rcx
+  400d22:	48 89 0a             	mov    %rcx,(%rdx)
+  400d25:	48 8b 4a 10          	mov    0x10(%rdx),%rcx
+  400d29:	48 85 c9             	test   %rcx,%rcx
+  400d2c:	74 23                	je     400d51 <refresh_potential+0x71>
+{'test': 1, 'je': 1, 'add': 1, 'mov': 5, 'sub': 1}
+4026a0
+  4026a0:	49 83 c0 01          	add    $0x1,%r8
+{'add': 1}
+------------- 2099 -------------
+402831
+  402831:	4c 8b 70 08          	mov    0x8(%rax),%r14
+  402835:	48 8b 38             	mov    (%rax),%rdi
+  402838:	49 2b 3e             	sub    (%r14),%rdi
+  40283b:	4c 8b 70 10          	mov    0x10(%rax),%r14
+  40283f:	49 03 3e             	add    (%r14),%rdi
+  402842:	48 83 ff 00          	cmp    $0x0,%rdi
+  402846:	7d d0                	jge    402818 <primal_bea_mpp+0xe8>
+{'jge': 1, 'add': 1, 'cmp': 1, 'mov': 3, 'sub': 1}
+402828
+  402828:	44 8b 40 18          	mov    0x18(%rax),%r8d
+  40282c:	45 85 c0             	test   %r8d,%r8d
+  40282f:	7e ef                	jle    402820 <primal_bea_mpp+0xf0>
+{'test': 1, 'jle': 1, 'mov': 1}
+402820
+  402820:	48 01 d0             	add    %rdx,%rax
+  402823:	49 39 c2             	cmp    %rax,%r10
+  402826:	76 68                	jbe    402890 <primal_bea_mpp+0x160>
+{'add': 1, 'jbe': 1, 'cmp': 1}
+40281a
+  40281a:	41 83 f8 02          	cmp    $0x2,%r8d
+  40281e:	74 2e                	je     40284e <primal_bea_mpp+0x11e>
+{'je': 1, 'cmp': 1}
+402818
+  402818:	7e 06                	jle    402820 <primal_bea_mpp+0xf0>
+{'jle': 1}
+------------- 2798 -------------
+402831
+  402831:	4c 8b 70 08          	mov    0x8(%rax),%r14
+  402835:	48 8b 38             	mov    (%rax),%rdi
+  402838:	49 2b 3e             	sub    (%r14),%rdi
+  40283b:	4c 8b 70 10          	mov    0x10(%rax),%r14
+  40283f:	49 03 3e             	add    (%r14),%rdi
+  402842:	48 83 ff 00          	cmp    $0x0,%rdi
+  402846:	7d d0                	jge    402818 <primal_bea_mpp+0xe8>
+{'jge': 1, 'add': 1, 'cmp': 1, 'mov': 3, 'sub': 1}
+402828
+  402828:	44 8b 40 18          	mov    0x18(%rax),%r8d
+  40282c:	45 85 c0             	test   %r8d,%r8d
+  40282f:	7e ef                	jle    402820 <primal_bea_mpp+0xf0>
+{'test': 1, 'jle': 1, 'mov': 1}
+402820
+  402820:	48 01 d0             	add    %rdx,%rax
+  402823:	49 39 c2             	cmp    %rax,%r10
+  402826:	76 68                	jbe    402890 <primal_bea_mpp+0x160>
+{'add': 1, 'jbe': 1, 'cmp': 1}
+40281a
+  40281a:	41 83 f8 02          	cmp    $0x2,%r8d
+  40281e:	74 2e                	je     40284e <primal_bea_mpp+0x11e>
+{'je': 1, 'cmp': 1}
+402818
+  402818:	7e 06                	jle    402820 <primal_bea_mpp+0xf0>
+{'jle': 1}
+------------- 2887 -------------
+401137
+  401137:	48 8b 48 08          	mov    0x8(%rax),%rcx
+  40113b:	48 8b 10             	mov    (%rax),%rdx
+  40113e:	48 2b 11             	sub    (%rcx),%rdx
+  401141:	48 8b 48 10          	mov    0x10(%rax),%rcx
+  401145:	48 03 11             	add    (%rcx),%rdx
+  401148:	8b 48 18             	mov    0x18(%rax),%ecx
+  40114b:	85 c9                	test   %ecx,%ecx
+  40114d:	78 df                	js     40112e <dual_feasible+0x2e>
+{'test': 1, 'add': 1, 'js': 1, 'mov': 4, 'sub': 1}
+401154
+  401154:	48 8b 8f 00 02 00 00 	mov    0x200(%rdi),%rcx
+  40115b:	48 f7 d9             	neg    %rcx
+  40115e:	48 39 ca             	cmp    %rcx,%rdx
+  401161:	7d cb                	jge    40112e <dual_feasible+0x2e>
+  401163:	48 8b 0d 76 2f 20 00 	mov    0x202f76(%rip),%rcx        # 6040e0 <stderr@@GLIBC_2.2.5>
+  40116a:	ba 16 00 00 00       	mov    $0x16,%edx
+  40116f:	be 01 00 00 00       	mov    $0x1,%esi
+  401174:	bf 35 2c 40 00       	mov    $0x402c35,%edi
+  401179:	e8 e2 f7 ff ff       	callq  400960 <fwrite@plt>
+  40117e:	48 8b 0d 5b 2f 20 00 	mov    0x202f5b(%rip),%rcx        # 6040e0 <stderr@@GLIBC_2.2.5>
+  401185:	ba 16 00 00 00       	mov    $0x16,%edx
+  40118a:	be 01 00 00 00       	mov    $0x1,%esi
+  40118f:	bf 4c 2c 40 00       	mov    $0x402c4c,%edi
+  401194:	e8 c7 f7 ff ff       	callq  400960 <fwrite@plt>
+  401199:	b8 01 00 00 00       	mov    $0x1,%eax
+  40119e:	48 83 c4 08          	add    $0x8,%rsp
+  4011a2:	c3                   	retq   
+  4011a3:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+{'callq': 2, 'neg': 1, 'retq': 1, 'jge': 1, 'mov': 10, 'add': 1, 'nopl': 1, 'cmp': 1}
+40112e
+  40112e:	48 83 c0 40          	add    $0x40,%rax
+  401132:	48 39 c6             	cmp    %rax,%rsi
+  401135:	76 71                	jbe    4011a8 <dual_feasible+0xa8>
+{'add': 1, 'jbe': 1, 'cmp': 1}
+40114f
+  40114f:	83 f9 01             	cmp    $0x1,%ecx
+  401152:	7f cc                	jg     401120 <dual_feasible+0x20>
+{'jg': 1, 'cmp': 1}
+------------- 2925 -------------
+400dc0
+  400dc0:	31 f6                	xor    %esi,%esi
+  400dc2:	83 78 18 02          	cmpl   $0x2,0x18(%rax)
+  400dc6:	40 0f 94 c6          	sete   %sil
+  400dca:	48 83 c0 40          	add    $0x40,%rax
+  400dce:	48 89 70 f0          	mov    %rsi,-0x10(%rax)
+  400dd2:	48 39 c1             	cmp    %rax,%rcx
+  400dd5:	75 e9                	jne    400dc0 <flow_cost+0x20>
+{'sete': 1, 'xor': 1, 'mov': 1, 'add': 1, 'jne': 1, 'cmpl': 1, 'cmp': 1}
+------------- 2943 -------------
+400e2a
+  400e2a:	48 83 c2 40          	add    $0x40,%rdx
+  400e2e:	48 39 d1             	cmp    %rdx,%rcx
+  400e31:	74 22                	je     400e55 <flow_cost+0xb5>
+{'je': 1, 'add': 1, 'cmp': 1}
+400e33
+  400e33:	48 83 7a 30 00       	cmpq   $0x0,0x30(%rdx)
+  400e38:	74 f0                	je     400e2a <flow_cost+0x8a>
+{'cmpq': 1, 'je': 1}
+400e3a
+  400e3a:	48 8b 72 08          	mov    0x8(%rdx),%rsi
+  400e3e:	44 8b 4e 60          	mov    0x60(%rsi),%r9d
+  400e42:	45 85 c9             	test   %r9d,%r9d
+  400e45:	78 39                	js     400e80 <flow_cost+0xe0>
+{'test': 1, 'mov': 2, 'js': 1}
+400e49
+  400e49:	48 03 02             	add    (%rdx),%rax
+  400e4c:	48 83 c2 40          	add    $0x40,%rdx
+  400e50:	48 39 d1             	cmp    %rdx,%rcx
+  400e53:	75 de                	jne    400e33 <flow_cost+0x93>
+{'add': 2, 'jne': 1, 'cmp': 1}
+400e47
+  400e47:	74 d7                	je     400e20 <flow_cost+0x80>
+{'je': 1}
+------------- 2964 -------------
+401db0
+  401db0:	4c 8b 4a 08          	mov    0x8(%rdx),%r9
+  401db4:	4c 8b 02             	mov    (%rdx),%r8
+  401db7:	4d 2b 01             	sub    (%r9),%r8
+  401dba:	4c 8b 4a 10          	mov    0x10(%rdx),%r9
+  401dbe:	4d 03 01             	add    (%r9),%r8
+  401dc1:	eb a2                	jmp    401d65 <suspend_impl+0xa5>
+  401dc3:	31 db                	xor    %ebx,%ebx
+  401dc5:	e9 30 ff ff ff       	jmpq   401cfa <suspend_impl+0x3a>
+  401dca:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+{'xor': 1, 'sub': 1, 'jmp': 1, 'mov': 3, 'jmpq': 1, 'add': 1, 'nopw': 1}
+401d30
+  401d30:	48 83 c3 01          	add    $0x1,%rbx
+{'add': 1}
+401d3d
+  401d3d:	44 8b 4a 18          	mov    0x18(%rdx),%r9d
+  401d41:	41 83 f9 01          	cmp    $0x1,%r9d
+  401d45:	74 69                	je     401db0 <suspend_impl+0xf0>
+{'je': 1, 'mov': 1, 'cmp': 1}
+401d65
+  401d65:	49 39 f0             	cmp    %rsi,%r8
+  401d68:	7f c6                	jg     401d30 <suspend_impl+0x70>
+{'jg': 1, 'cmp': 1}
+401d6a
+  401d6a:	4c 8b 02             	mov    (%rdx),%r8
+  401d6d:	48 83 c1 40          	add    $0x40,%rcx
+  401d71:	4c 89 41 c0          	mov    %r8,-0x40(%rcx)
+  401d75:	4c 8b 42 08          	mov    0x8(%rdx),%r8
+  401d79:	4c 89 41 c8          	mov    %r8,-0x38(%rcx)
+  401d7d:	4c 8b 42 10          	mov    0x10(%rdx),%r8
+  401d81:	4c 89 41 d0          	mov    %r8,-0x30(%rcx)
+  401d85:	4c 8b 42 18          	mov    0x18(%rdx),%r8
+  401d89:	4c 89 41 d8          	mov    %r8,-0x28(%rcx)
+  401d8d:	4c 8b 42 20          	mov    0x20(%rdx),%r8
+  401d91:	4c 89 41 e0          	mov    %r8,-0x20(%rcx)
+  401d95:	4c 8b 42 28          	mov    0x28(%rdx),%r8
+  401d99:	4c 89 41 e8          	mov    %r8,-0x18(%rcx)
+  401d9d:	4c 8b 42 30          	mov    0x30(%rdx),%r8
+  401da1:	4c 89 41 f0          	mov    %r8,-0x10(%rcx)
+  401da5:	4c 8b 42 38          	mov    0x38(%rdx),%r8
+  401da9:	4c 89 41 f8          	mov    %r8,-0x8(%rcx)
+  401dad:	eb 85                	jmp    401d34 <suspend_impl+0x74>
+  401daf:	90                   	nop
+{'add': 1, 'nop\n': 1, 'jmp': 1, 'mov': 16}
+------------- 2991 -------------
+400ca8
+  400ca8:	48 8b 50 08          	mov    0x8(%rax),%rdx
+  400cac:	48 8b 4a 38          	mov    0x38(%rdx),%rcx
+  400cb0:	48 89 48 20          	mov    %rcx,0x20(%rax)
+  400cb4:	48 89 42 38          	mov    %rax,0x38(%rdx)
+  400cb8:	48 8b 50 10          	mov    0x10(%rax),%rdx
+  400cbc:	48 8b 4a 40          	mov    0x40(%rdx),%rcx
+  400cc0:	48 89 48 28          	mov    %rcx,0x28(%rax)
+  400cc4:	48 89 42 40          	mov    %rax,0x40(%rdx)
+  400cc8:	48 83 c0 40          	add    $0x40,%rax
+  400ccc:	48 39 c6             	cmp    %rax,%rsi
+  400ccf:	77 d7                	ja     400ca8 <refresh_neighbour_lists+0x48>
+{'add': 1, 'mov': 8, 'ja': 1, 'cmp': 1}
+400c78
+  400c78:	48 c7 40 40 00 00 00 	movq   $0x0,0x40(%rax)
+  400c80:	48 c7 40 38 00 00 00 	movq   $0x0,0x38(%rax)
+  400c88:	48 83 c0 68          	add    $0x68,%rax
+  400c8c:	48 39 c2             	cmp    %rax,%rdx
+  400c8f:	77 e7                	ja     400c78 <refresh_neighbour_lists+0x18>
+{'add': 1, 'cmp': 1, 'ja': 1, 'movq': 2}
+40179e
+  40179e:	48 01 70 30          	add    %rsi,0x30(%rax)
+{'add': 1}
+401798
+  401798:	48 3b 48 18          	cmp    0x18(%rax),%rcx
+  40179c:	74 04                	je     4017a2 <resize_prob+0x82>
+{'je': 1, 'cmp': 1}
+------------- 3084 -------------
+401b31
+  401b31:	48 8b 5a 08          	mov    0x8(%rdx),%rbx
+  401b35:	48 63 4b 64          	movslq 0x64(%rbx),%rcx
+  401b39:	48 03 4a 38          	add    0x38(%rdx),%rcx
+  401b3d:	48 39 cd             	cmp    %rcx,%rbp
+  401b40:	7c e6                	jl     401b28 <price_out_impl+0x1b8>
+{'jl': 1, 'movslq': 1, 'add': 1, 'mov': 1, 'cmp': 1}
+401b42
+  401b42:	4d 89 f9             	mov    %r15,%r9
+  401b45:	4c 2b 0b             	sub    (%rbx),%r9
+  401b48:	4d 03 4d 00          	add    0x0(%r13),%r9
+  401b4c:	79 da                	jns    401b28 <price_out_impl+0x1b8>
+{'jns': 1, 'add': 1, 'mov': 1, 'sub': 1}
+401b28
+  401b28:	48 8b 53 48          	mov    0x48(%rbx),%rdx
+  401b2c:	48 85 d2             	test   %rdx,%rdx
+  401b2f:	74 6f                	je     401ba0 <price_out_impl+0x230>
+{'test': 1, 'je': 1, 'mov': 1}
+401af5
+  401af5:	49 8b 53 08          	mov    0x8(%r11),%rdx
+  401af9:	4d 8b 6c 24 d0       	mov    -0x30(%r12),%r13
+  401afe:	48 8b 52 48          	mov    0x48(%rdx),%rdx
+  401b02:	49 63 6d 64          	movslq 0x64(%r13),%rbp
+  401b06:	49 2b 6c 24 f8       	sub    -0x8(%r12),%rbp
+  401b0b:	48 03 6c 24 18       	add    0x18(%rsp),%rbp
+  401b10:	48 85 d2             	test   %rdx,%rdx
+  401b13:	0f 84 87 00 00 00    	je     401ba0 <price_out_impl+0x230>
+{'movslq': 1, 'sub': 1, 'mov': 3, 'add': 1, 'test': 1, 'je': 1}
+401ad5
+  401ad5:	49 8b 54 24 d0       	mov    -0x30(%r12),%rdx
+  401ada:	48 8b 52 38          	mov    0x38(%rdx),%rdx
+  401ade:	48 8b 52 10          	mov    0x10(%rdx),%rdx
+  401ae2:	4c 89 5a 48          	mov    %r11,0x48(%rdx)
+  401ae6:	4d 89 e3             	mov    %r12,%r11
+  401ae9:	41 83 7c 24 d8 ff    	cmpl   $0xffffffff,-0x28(%r12)
+  401aef:	0f 84 ab 00 00 00    	je     401ba0 <price_out_impl+0x230>
+{'je': 1, 'cmpl': 1, 'mov': 5}

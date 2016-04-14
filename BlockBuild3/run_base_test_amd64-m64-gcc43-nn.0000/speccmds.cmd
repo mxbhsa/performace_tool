@@ -1,0 +1,2 @@
+-C /home/mxb/SPEC/spec2k6-v1.1/benchspec/CPU2006/433.milc/run/run_base_test_amd64-m64-gcc43-nn.0000
+-i su3imp.in -o su3imp.out -e su3imp.err ../run_base_test_amd64-m64-gcc43-nn.0000/milc_base.amd64-m64-gcc43-nn
